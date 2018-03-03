@@ -1,0 +1,24 @@
+body{
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  background-color: #DBDBDB;
+}
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #FAFAFA;
+
+}
+.container{
+    display:flex;
+    margin: auto;
+}
+#myPic{
+  border-radius: 8px;
+}
+#navigation{
+  padding-top: 25px;
+}
