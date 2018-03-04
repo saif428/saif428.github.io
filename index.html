@@ -1,16 +1,121 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="C:\Users\saifa\Documents\mywebsite\main.css">
-<link rel="stylesheet" href="css/main.css">
+<head>
+  <link rel="stylesheet" href="C:\Users\saifa\Documents\mywebsite\main.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+</head>
+<!-- <link rel="stylesheet" href="css/main.css"> -->
 <title>THE GOOD LIFE</title>
-
-<div class="container">
-  <div class="card">
-    <h1>Hi, my name is Saif Ali</h1>
-    <img src="https://images.pexels.com/photos/772803/pexels-photo-772803.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" id="myPic" alt="mainPic">
-    <div id="navigation">
-      <a href="google.com" target="_blank"><button class="btn btn-primary">CONTACT ME</button></a>
-      <a href="files/SaifAli_Resume2018.pdf" target="_blank"><button class="btn btn-secondary">MY RESUME</button></a>
-    </div>
-
+<header>
+  <div class="topRow">
+    <p><strong>SAIF</strong> ALI</p>
+      <button id="testBtn" type="testBtn" name="button">TESTBUTTON</button>
   </div>
-</div>
+</header>
+<!-- <script>
+  $('#contactBtn').click(function() {
+    $('#rightCard').toggle('slow', function() {
+      // Animation complete.
+    });
+  });
+</script> -->
+<!-- <script type="text/javascript">
+        function showDiv() {
+            div = document.getElementById('showInfo');
+            div.style.display = "block";
+        }
+</script> -->
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+
+<main>
+  <div class="infoContainer">
+    <div id="showInfo">
+      <h1>Hi, my name is Saif Al3</h1>
+      <img src="https://sfondo.info/i/original/8/1/1/70717.jpg" alt="pic" id="thePic">
+      <div id="navigation">
+        <button id="closebtn">Close</button>
+      </div>
+    </div>
+  </div>
+  <div class="leftContainer">
+    <div class="leftCard">
+      <h1>Hi, my name is Saif Al1</h1>
+      <img src="https://sfondo.info/i/original/8/1/1/70717.jpg" alt="pic" id="thePic">
+      <div id="navigation">
+        <!-- <button onclick="javascript:showDiv();">Click to show div</button> -->
+        <input type="button" value="CONTACT ME" id="contactBtn">
+      </div>
+    </div>
+  </div>
+  <div class="rightContainer">
+    <div class="rightCard">
+      <h1>Hi, my name is Saif Al2</h1>
+      <img src="http://cdn.droidviews.com/wp-content/uploads/2017/05/samsung-dex_wall_droidviews_01.png" alt="pic" id="thePic">
+      <div id="navigation">
+        <a href="files/SaifAli_Resume2018.pdf" target="_blank"><button id="resumeBtn">MY RESUME</button></a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="footer">
+      &nbsp<a href="https://www.linkedin.com/in/saifali00/" target="_blank"><i id="icon" class="fab fa-linkedin-in">linkedin</i></a>&nbsp
+      <a href="mailto:saifali428@gmail.com" target="_top"><i id="icon" class="far fa-envelope"></i></a>&nbsp
+      <a href="https://github.com/saif428" target="_blank"><i id="icon" class="fab fa-github"></i></a>&nbsp
+  </div>
+</footer>
+
+
+<script type="text/javascript">
+var $contactBtn = $('#contactBtn');
+var $testBtn = $('#testBtn');
+var $closeBtn = $('#closeBtn')
+var $leftCard = $('.leftCard');
+var $rightCard = $('.rightCard');
+var $showInfo = $('#showInfo');
+
+$contactBtn.on("click", function() {
+  $rightCard.css('display', 'block');
+  setTimeout(function() {
+      $rightCard.css('opacity', '0');
+  }, 50);
+  $leftCard.css('display', 'block');
+  setTimeout(function() {
+      $leftCard.css('opacity', '0');
+  }, 50);
+  $showInfo.css('display', 'block');
+  setTimeout(function() {
+      $showInfo.css('opacity', '1');
+  }, 1000);
+});
+$closeBtn.on("click", function() {
+  $showInfo.css('opacity', '0');
+  $showInfo.one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
+	   $(this).css('display', 'none');
+  });
+});
+
+$testBtn.on("click", function() {
+  $rightCard.css('display', 'block');
+  setTimeout(function() {
+      $rightCard.css('opacity', '1');
+  }, 50);
+  $leftCard.css('display', 'block');
+  setTimeout(function() {
+      $leftCard.css('opacity', '1');
+  }, 50);
+});
+
+</script>
+
+
+<!-- <script type="text/javascript">
+$("#contactBtn").on('click', function() {
+ $("#showInfo, .rightCard").fadeIn();
+ $("").fadeOut();
+});
+$("#closebtn").on('click', function() {
+ $("#leftCard").fadeIn();
+ $("#showInfo").fadeOut();
+});
+</script> -->
