@@ -1,39 +1,25 @@
 <head>
-  <link rel="stylesheet" href="css/main.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+  <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <title>THE GOOD LIFE</title>
 <header>
   <div class="topRow">
     <p><strong>SAIF</strong> ALI</p>
-      <button id="testBtn" type="testBtn" name="button">TESTBUTTON</button>
   </div>
 </header>
-<!-- <script>
-  $('#contactBtn').click(function() {
-    $('#rightCard').toggle('slow', function() {
-      // Animation complete.
-    });
-  });
-</script> -->
-<!-- <script type="text/javascript">
-        function showDiv() {
-            div = document.getElementById('showInfo');
-            div.style.display = "block";
-        }
-</script> -->
-
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
-
-<main>
+<body>
   <div class="infoContainer">
+    <div class="wrapper">
+        <button id="welcomeBtn" type="welcomeBtn" name="welcomeBtn">WELCOME</button>
+    </div>
     <div id="showInfo">
       <h1>Hi, my name is Saif Al3</h1>
       <img src="https://sfondo.info/i/original/8/1/1/70717.jpg" alt="pic" id="thePic">
       <div id="navigation">
-        <button id="closebtn">Close</button>
+        <button id="closeBtn">GO BACK</button>
       </div>
     </div>
   </div>
@@ -56,7 +42,7 @@
       </div>
     </div>
   </div>
-</main>
+</body>
 <footer>
   <div class="footer">
       &nbsp<a href="https://www.linkedin.com/in/saifali00/" target="_blank"><i id="icon" class="fab fa-linkedin-in">linkedin</i></a>&nbsp
@@ -68,34 +54,45 @@
 
 <script type="text/javascript">
 var $contactBtn = $('#contactBtn');
-var $testBtn = $('#testBtn');
-var $closeBtn = $('#closeBtn')
+var $welcomeBtn = $('#welcomeBtn');
+var $closeBtn = $('#closeBtn');
+
 var $leftCard = $('.leftCard');
 var $rightCard = $('.rightCard');
 var $showInfo = $('#showInfo');
+var $wrapper = $('.wrapper');
 
 $contactBtn.on("click", function() {
   $rightCard.css('display', 'block');
   setTimeout(function() {
       $rightCard.css('opacity', '0');
-  }, 50);
+  }, 0);
   $leftCard.css('display', 'block');
   setTimeout(function() {
       $leftCard.css('opacity', '0');
-  }, 50);
+  }, 0);
   $showInfo.css('display', 'block');
   setTimeout(function() {
       $showInfo.css('opacity', '1');
-  }, 1000);
+  }, 500);
 });
 $closeBtn.on("click", function() {
-  $showInfo.css('opacity', '0');
-  $showInfo.one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function() {
-	   $(this).css('display', 'none');
-  });
+    $showInfo.css('display', 'block');
+    setTimeout(function() {
+        $showInfo.css('opacity', '0');
+    }, 0);
+    $rightCard.css('display', 'block');
+    setTimeout(function() {
+        $rightCard.css('opacity', '1');
+        $rightCard.css('z-index', '10');
+    }, 0);
+    $leftCard.css('display', 'block');
+    setTimeout(function() {
+        $leftCard.css('opacity', '1');
+        $leftCard.css('z-index', '10');
+    }, 0);
 });
-
-$testBtn.on("click", function() {
+$welcomeBtn.on("click", function() {
   $rightCard.css('display', 'block');
   setTimeout(function() {
       $rightCard.css('opacity', '1');
@@ -104,18 +101,9 @@ $testBtn.on("click", function() {
   setTimeout(function() {
       $leftCard.css('opacity', '1');
   }, 50);
+  $wrapper.css('display', 'block');
+  setTimeout(function() {
+      $wrapper.css('opacity', '0');
+  }, 100);
 });
-
 </script>
-
-
-<!-- <script type="text/javascript">
-$("#contactBtn").on('click', function() {
- $("#showInfo, .rightCard").fadeIn();
- $("").fadeOut();
-});
-$("#closebtn").on('click', function() {
- $("#leftCard").fadeIn();
- $("#showInfo").fadeOut();
-});
-</script> -->
