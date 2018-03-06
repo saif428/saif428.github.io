@@ -2,6 +2,8 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="C:\Users\saifa\Documents\mywebsite\main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <title>THE GOOD LIFE</title>
@@ -63,18 +65,18 @@ var $showInfo = $('#showInfo');
 var $wrapper = $('.wrapper');
 
 $contactBtn.on("click", function() {
-  $rightCard.css('display', 'block');
-  setTimeout(function() {
-      $rightCard.css('opacity', '0');
-  }, 0);
   $leftCard.css('display', 'block');
   setTimeout(function() {
       $leftCard.css('opacity', '0');
-  }, 0);
+  }, 50);
+  $rightCard.css('display', 'block');
+  setTimeout(function() {
+      $rightCard.css('opacity', '0');
+  }, 50);
   $showInfo.css('display', 'block');
   setTimeout(function() {
       $showInfo.css('opacity', '1');
-  }, 500);
+  }, 600);
 });
 $closeBtn.on("click", function() {
     $showInfo.css('display', 'block');
