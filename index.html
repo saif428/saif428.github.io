@@ -1,110 +1,28 @@
-<head>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="C:\Users\saifa\Documents\mywebsite\main.css">
-</head>
-
-<title>THE GOOD LIFE</title>
-<header>
-  <div class="topRow">
-    <p><strong>SAIF</strong> ALI</p>
-  </div>
-</header>
-<body>
-  <div class="infoContainer">
-    <div class="wrapper">
-        <button id="welcomeBtn" type="welcomeBtn" name="welcomeBtn">WELCOME</button>
-    </div>
-    <div id="showInfo">
-      <h1>Hi, my name is Saif Al3</h1>
-      <img src="https://sfondo.info/i/original/8/1/1/70717.jpg" alt="pic" id="thePic">
-      <div id="navigation">
-        <button id="closeBtn">GO BACK</button>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>THE GOOD LIFE</title>
+    <script defer src="js/fontawesome-all.js"></script>
+    <link rel="stylesheet" href="css/main.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+  <body>
+    <div class= "infoContainer">
+      <div class ="showInfo">
+        <img src="C:\Users\saifa\Downloads\IMG_2398.jpg" alt="pic" id="thePic"/>
+        <p>Hi, my name is Saif Ali</p>
+        <div id="navigation">
+          <button class="myBtn">CONTACT ME</button>
+          <a href="files/SaifAli_Resume2018.pdf" target="_blank"><button class ="myBtn">MY RESUME</button></a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="leftContainer">
-    <div class="leftCard">
-      <h1>Hi, my name is Saif Al1</h1>
-      <img src="https://sfondo.info/i/original/8/1/1/70717.jpg" alt="pic" id="thePic">
-      <div id="navigation">
-        <!-- <button onclick="javascript:showDiv();">Click to show div</button> -->
-        <input type="button" value="CONTACT ME" id="contactBtn">
-      </div>
+    <div class="footer">
+        <a href="https://www.linkedin.com/in/saifali00/" target="_blank"><i id="icon" class="fab fa-linkedin-in"></i></a>&nbsp
+        <a href="mailto:saifali428@gmail.com" target="_top"><i id="icon" class="far fa-envelope"></i></a>&nbsp
+        <a href="https://github.com/saif428" target="_blank"><i id="icon" class="fab fa-github"></i></a>&nbsp
     </div>
-  </div>
-  <div class="rightContainer">
-    <div class="rightCard">
-      <h1>Hi, my name is Saif Al2</h1>
-      <img src="https://cdn.droidviews.com/wp-content/uploads/2017/05/samsung-dex_wall_droidviews_01.png" alt="pic" id="thePic">
-      <div id="navigation">
-        <a href="files/SaifAli_Resume2018.pdf" target="_blank"><button id="resumeBtn">MY RESUME</button></a>
-      </div>
-    </div>
-  </div>
-</body>
-<footer>
-  <div class="footer">
-      &nbsp<a href="https://www.linkedin.com/in/saifali00/" target="_blank"><i id="icon" class="fab fa-linkedin-in">linkedin</i></a>&nbsp
-      <a href="mailto:saifali428@gmail.com" target="_top"><i id="icon" class="far fa-envelope"></i></a>&nbsp
-      <a href="https://github.com/saif428" target="_blank"><i id="icon" class="fab fa-github"></i></a>&nbsp
-  </div>
-</footer>
+  </body>
 
-
-<script type="text/javascript">
-var $contactBtn = $('#contactBtn');
-var $welcomeBtn = $('#welcomeBtn');
-var $closeBtn = $('#closeBtn');
-
-var $leftCard = $('.leftCard');
-var $rightCard = $('.rightCard');
-var $showInfo = $('#showInfo');
-var $wrapper = $('.wrapper');
-
-$contactBtn.on("click", function() {
-  $leftCard.css('display', 'block');
-  setTimeout(function() {
-      $leftCard.css('opacity', '0');
-  }, 50);
-  $rightCard.css('display', 'block');
-  setTimeout(function() {
-      $rightCard.css('opacity', '0');
-  }, 50);
-  $showInfo.css('display', 'block');
-  setTimeout(function() {
-      $showInfo.css('opacity', '1');
-  }, 600);
-});
-$closeBtn.on("click", function() {
-    $showInfo.css('display', 'block');
-    setTimeout(function() {
-        $showInfo.css('opacity', '0');
-    }, 0);
-    $rightCard.css('display', 'block');
-    setTimeout(function() {
-        $rightCard.css('opacity', '1');
-        $rightCard.css('z-index', '10');
-    }, 0);
-    $leftCard.css('display', 'block');
-    setTimeout(function() {
-        $leftCard.css('opacity', '1');
-        $leftCard.css('z-index', '10');
-    }, 0);
-});
-$welcomeBtn.on("click", function() {
-  $rightCard.css('display', 'block');
-  setTimeout(function() {
-      $rightCard.css('opacity', '1');
-  }, 50);
-  $leftCard.css('display', 'block');
-  setTimeout(function() {
-      $leftCard.css('opacity', '1');
-  }, 50);
-  $wrapper.css('display', 'block');
-  setTimeout(function() {
-      $wrapper.css('opacity', '0');
-  }, 100);
-});
-</script>
+</html>
