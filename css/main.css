@@ -4,27 +4,13 @@ body{
   background-color: #F5F5F5;
 }
 p{
-  font-size: 48px;
+  font-size: 44px;
   margin: 15px;
 }
 .topRow{
   padding: 5px 50px 10px 50px;
 }
-.leftCard {
-    /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  text-align: center;
-  padding: 50px;
-  border-radius: 10px;
-  background-color: #FEFEFE;
-  justify-content: middle;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  display: none;
-}
-#showInfo {
+.showInfo {
     /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   text-align: center;
@@ -32,89 +18,19 @@ p{
   border-radius: 10px;
   background-color: #FEFEFE;
   justify-content: middle;
-  z-index: 2;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  display: none;
-  width: 50%;
+  transition: background 0.5s ease-in-out;
+  width: 40%;
   position: absolute;
 }
 .infoContainer{
-  float: left;
   width: 99%;
   display: flex;
   justify-content: center;
   position: absolute;
+  margin-top: 8%;
+  margin-bottom: 8%;
 }
-.leftContainer{
-  float: left;
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-}
-.rightCard {
-    /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  text-align: center;
-  padding: 50px;
-  border-radius: 10px;
-  background-color: #FEFEFE;
-  justify-content: middle;
-  margin: 0 auto;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  display: none;
-}
-.rightContainer{
-  float: right;
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  margin: 0 auto;
-}
-
-#navigation{
-  padding-top: 25px;
-}
-#contactBtn{
-  color: #1ecd97;
-  padding: 15px;
-  border: 2px solid #1ecd97;
-  border-radius: 25px;
-  background-color: #FEFEFE;
-  transition-duration: 0.5s;
-  font-weight: bold;
-  z-index: 1;
-  cursor: pointer;
-}
-#contactBtn:hover{
-  background-color: #CD1E54;
-  color: white;
-}
-#contactBtn:focus {
-  outline: none;
-}
-#resumeBtn{
-  color: #42A5F5;
-  padding: 15px;
-  border: 2px solid #42A5F5;
-  border-radius: 25px;
-  background-color: #FEFEFE;
-  transition-duration: 0.5s;
-  font-weight: bold;
-  cursor: pointer;
-}
-#resumeBtn:hover{
-  background-color: #F59242;
-  color: white;
-}
-#resumeBtn:focus {
-  outline: none;
-}
-#closebtn{
+.myBtn{
   color: #1ecd97;
   padding: 15px;
   border: 2px solid #1ecd97;
@@ -124,70 +40,40 @@ p{
   font-weight: bold;
   cursor: pointer;
 }
-#closebtn:hover{
+.myBtn:hover{
   background-color: #CD1E54;
   color: white;
 }
-#closebtn:focus {
+.myBtn:focus {
   outline: none;
 }
 #thePic{
-  height: 300px;
-  width: 300px;
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
 }
-.leftCard:hover{
-  transition-property: all;
-  transition-duration: 0.5s;
-  background-color: #1ecd97;
-}
-.rightCard:hover{
-  background-color: #42A5F5;
-  transition-duration: 0.5s;
-  transition-property: all;
-}
-#showInfo:hover{
+.showInfo:hover{
   transition-property: all;
   transition-duration: 0.5s;
   background-color: #1ecd97;
 }
 .footer{
-  position: absolute;
+  display: block;
+  position: fixed;
   bottom: 0;
-  height: 50px;
+  height: 7%;
   background-color: transparent;
   text-align: center;
   margin: 0 auto;
   width: 99%;
 }
 #icon{
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   color: gray;
   margin: 0 auto;
 }
 #icon:hover{
   color: #E53935;
   transition-duration: 0.5s;
-}
-#welcomeBtn{
-  color: black;
-  padding: 15px;
-  border: 2px solid black;
-  background-color: #FEFEFE;
-  transition-duration: 0.5s;
-  font-weight: bold;
-  cursor: pointer;
-}
-#welcomeBtn:hover{
-  transition-duration: 0.5s;
-  background-color: black;
-  color: #FEFEFE;
-}
-#welcomeBtn:focus {
-  outline: none;
-}
-.wrapper{
-  text-align: center;
-  width: 100%;
-  margin-top: 15%;
 }
